@@ -1,12 +1,5 @@
 // +build windows
 
-// Copyright 2014 Oleku Konko All rights reserved.
-// Use of this source code is governed by a MIT
-// license that can be found in the LICENSE file.
-
-// This module is a Terminal  API for the Go Programming Language.
-// The protocols were written in pure Go and works on windows and unix systems
-
 package ts
 
 import (
@@ -16,7 +9,6 @@ import (
 
 var (
 	kernel32 = syscall.NewLazyDLL("kernel32.dll")
-
 	// Retrieves information about the specified console screen buffer.
 	// See http://msdn.microsoft.com/en-us/library/windows/desktop/ms683171(v=vs.85).aspx
 	screenBufferInfo = kernel32.NewProc("GetConsoleScreenBufferInfo")
@@ -50,15 +42,12 @@ func GetSize() (ws Size, err error) {
 	rc, _, err := screenBufferInfo.Call(
 		uintptr(syscall.Stdout),
 		uintptr(unsafe.Pointer(&info)))
-
 	if rc == 0 {
 		return ws, err
 	}
-
 	ws = Size{info.SrWindow.Bottom,
 		info.SrWindow.Right,
 		info.DwCursorPosition.X,
 		info.DwCursorPosition.Y}
-
 	return ws, nil
 }

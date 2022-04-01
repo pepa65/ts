@@ -1,28 +1,28 @@
-ts (Terminal Size)
-==
-
-[![Build Status](https://travis-ci.org/olekukonko/ts.png?branch=master)](https://travis-ci.org/olekukonko/ts) [![Total views](https://sourcegraph.com/api/repos/github.com/olekukonko/ts/counters/views.png)](https://sourcegraph.com/github.com/olekukonko/ts)
+# ts (Terminal Size)
 
 Simple go Application to get Terminal Size. So Many Implementations do not support windows but `ts` has full windows support.
-Run `go get github.com/olekukonko/ts` to download and install
+Run `go get github.com/pepa65/ts` to download and install.
 
-#### Example
+### Example
 
 ```go
 package main
 
 import (
 	"fmt"
-	"github.com/olekukonko/ts"
+	"github.com/pepa65/ts"
 )
 
 func main() {
-	size, _ := ts.GetSize()
-	fmt.Println(size.Col())  // Get Width
-	fmt.Println(size.Row())  // Get Height
-	fmt.Println(size.PosX()) // Get X position
-	fmt.Println(size.PosY()) // Get Y position
+	term, _ := ts.GetSize()
+	fmt.Printf("ColxRow: %dx%d  X,Y: %d,%d\n", term.W, term.H, term.X, term.Y)
 }
 ```
 
-[See Documentation](http://godoc.org/github.com/olekukonko/ts)
+### Issues
+Getting the current position (.X and .Y) does not seem to work, at least on Linux.
+
+### Documentation
+[Original Documentation](http://godoc.org/github.com/olekukonko/ts)
+
+* Changes: instead of calling `.Col()`, `.Row()`, `.PosX()` and `.PosY()` just access the members of the Size struct: `.W`, `.H`, `.X` and `.Y`
