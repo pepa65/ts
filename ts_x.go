@@ -15,7 +15,7 @@ func GetSize() (ws Size, err error) {
 		uintptr(unsafe.Pointer(&ws)))
 	err = getError(ec)
 	if TIOCGWINSZ == 0 && err != nil {
-		ws = Size{80, 25, 0, 0}
+		ws = Size{25, 80, 0, 0}
 	}
 	return ws, err
 }

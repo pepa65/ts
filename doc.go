@@ -1,2 +1,0 @@
-// Terminal Size
-package ts

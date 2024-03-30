@@ -16,7 +16,7 @@ func GetSize() (ws Size, err error) {
 	var wsz *unix.Winsize
 	wsz, err = unix.IoctlGetWinsize(syscall.Stdout, TIOCGWINSZ)
 	if err != nil {
-		ws = Size{80, 25, 0, 0}
+		ws = Size{25, 80, 0, 0}
 	} else {
 		ws = Size{wsz.Row, wsz.Col, wsz.Xpixel, wsz.Ypixel}
 	}
