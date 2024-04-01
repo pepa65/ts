@@ -1,10 +1,17 @@
 # ts (Terminal Size)
+Simple go application to get Terminal Size.
+So many implementations do not support windows but `ts` has full windows support
+(and OSX, Solaris, UNIX, etc.)
 
-Simple go Application to get Terminal Size. So Many Implementations do not support windows but `ts` has full windows support.
-Run `go get github.com/pepa65/ts` to download and install.
+## Install cli
+`go install github.com/pepa65/ts/ts`
 
-### Example
+### Usage
+`ts`
 
+Sample output: `80,25` (WIDTH,HEIGHT)
+
+## Example use module
 ```go
 package main
 
@@ -22,7 +29,7 @@ func main() {
 ### Issues
 Getting the current position (.X and .Y) does not seem to work, at least on Linux.
 
-### Documentation
+## Documentation
 [Original Documentation](http://godoc.org/github.com/olekukonko/ts)
 
 * Changes: instead of calling `.Col()`, `.Row()`, `.PosX()` and `.PosY()` just access the members of the Size struct: `.W`, `.H`, `.X` and `.Y`
