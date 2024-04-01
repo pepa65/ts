@@ -10,7 +10,7 @@ import (
 const TIOCGWINSZ = 21608
 
 func GetSize() (ws Size, err error) {
-	ws = Size{80, 25, 0, 0}
+	ws = Size{25, 80, 0, 0}
 	wsz, err := unix.IoctlGetWinsize(syscall.Stdout, TIOCGWINSZ)
 	if err == nil {
 		ws = Size{wsz.Row, wsz.Col, wsz.Xpixel, wsz.Ypixel}

@@ -12,7 +12,7 @@ func GetSize() (ws Size, err error) {
 		syscall.SYS_IOCTL,
 		uintptr(syscall.Stdout),
 		uintptr(TIOCGWINSZ),
-		uintptr(unsafe.Pointer(&ws))
+		uintptr(unsafe.Pointer(&ws)),
 	)
 	err = getError(ec)
 	if TIOCGWINSZ == 0 && err != nil {
