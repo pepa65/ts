@@ -4,7 +4,7 @@ So many implementations do not support windows but `ts` has full windows support
 (and OSX, Solaris, UNIX, etc.)
 
 ## Install cli
-`go install github.com/pepa65/ts/ts`
+`go install github.com/pepa65/ts@latest`
 
 ### Usage
 `ts`
@@ -17,7 +17,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/pepa65/ts"
+	"github.com/pepa65/ts/ts"
 )
 
 func main() {

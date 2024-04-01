@@ -2,6 +2,4 @@
 
 package ts
 
-const (
-	TIOCGWINSZ = 0x40087468
-)
+const TIOCGWINSZ = 0x40087468

@@ -2,6 +2,4 @@
 
 package ts
 
-const (
-	TIOCGWINSZ = 0
-)
+const TIOCGWINSZ = 0
