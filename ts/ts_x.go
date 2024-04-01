@@ -8,10 +8,12 @@ import (
 )
 
 func GetSize() (ws Size, err error) {
-	_, _, ec := syscall.Syscall(syscall.SYS_IOCTL,
+	_, _, ec := syscall.Syscall(
+		syscall.SYS_IOCTL,
 		uintptr(syscall.Stdout),
 		uintptr(TIOCGWINSZ),
-		uintptr(unsafe.Pointer(&ws)))
+		uintptr(unsafe.Pointer(&ws))
+	)
 	err = getError(ec)
 	if TIOCGWINSZ == 0 && err != nil {
 		ws = Size{80, 25, 0, 0}

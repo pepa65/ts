@@ -41,7 +41,8 @@ func GetSize() (ws Size, err error) {
 	var info CONSOLE_SCREEN_BUFFER_INFO
 	rc, _, err := screenBufferInfo.Call(
 		uintptr(syscall.Stdout),
-		uintptr(unsafe.Pointer(&info)))
+		uintptr(unsafe.Pointer(&info))
+	)
 	if rc == 0 {
 		return ws, err
 	}
