@@ -3,14 +3,6 @@ Simple go application to get Terminal Size.
 So many implementations do not support windows but `ts` has full windows support
 (and OSX, Solaris, UNIX, etc.)
 
-## Install cli
-`go install github.com/pepa65/ts@latest`
-
-### Usage
-`ts`
-
-Sample output: `80,25` (WIDTH,HEIGHT)
-
 ## Example use module
 ```go
 package main
@@ -26,7 +18,7 @@ func main() {
 }
 ```
 
-### Issues
+## Issues
 Getting the current position (.X and .Y) does not seem to work, at least on Linux.
 
 ## Documentation
