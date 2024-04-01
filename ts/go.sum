@@ -1,0 +1,4 @@
+github.com/pepa65/ts v0.0.0-20240401123914-478393798479 h1:ifhhAnLv7093WGD5L3BEZC1Lp6IK3gBYRlbj5z7JZAI=
+github.com/pepa65/ts v0.0.0-20240401123914-478393798479/go.mod h1:P53lCgQrHJvBQohJhRC67hrgjt4a/+7kOBRS2pMx66Q=
+golang.org/x/sys v0.18.0 h1:DBdB3niSjOA/O0blCZBqDefyWNYveAYMNF1Wum0DYQ4=
+golang.org/x/sys v0.18.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
