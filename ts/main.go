@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pepa65/ts/ts"
+	"github.com/pepa65/ts"
 )
 
 func main() {

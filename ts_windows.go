@@ -48,8 +48,8 @@ func GetSize() (ws Size, err error) {
 	}
 
 	ws = Size{
-		info.SrWindow.Right,
 		info.SrWindow.Bottom,
+		info.SrWindow.Right,
 		info.DwCursorPosition.X,
 		info.DwCursorPosition.Y,
 	}
