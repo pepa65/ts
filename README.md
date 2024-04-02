@@ -4,7 +4,7 @@ So many implementations do not support windows but `ts` has full windows support
 (and OSX, Solaris, UNIX, etc.)
 
 ## Install cli
-`go install github.com/pepa65/cnd/ts@latest`
+`go install github.com/pepa65/cmd/ts@latest`
 
 ### Usage
 `ts`
