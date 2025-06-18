@@ -6,6 +6,9 @@ So many implementations do not support windows but `ts` has full windows support
 ## Install cli
 `go install github.com/pepa65/cmd/ts@latest`
 
+Or, after cloning the repo:
+`go install cmd/ts/ts.go`
+
 ### Usage
 `ts`
 
